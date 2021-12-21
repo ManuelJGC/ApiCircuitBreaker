@@ -12,10 +12,10 @@ import starter.Saludo;
 public class IndexController {
  
     @Autowired 
-    private Saludo saludo;
+    private Saludo saludar;
 
     @GetMapping("/saludo")
     public ResponseEntity<String> saludo(){
-        return new ResponseEntity<String>(HttpStatus.OK).ok(saludo.mensajeSaludo());
+        return new ResponseEntity<String>(HttpStatus.OK).ok(saludar.mensajeSaludo());
     }
 }
